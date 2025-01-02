@@ -1,0 +1,10 @@
+module full_adder(s,cy,a,b,c);
+input a,b,c;
+output s,cy;
+wire w,x,y;
+xor(w,a,b);
+xor(s,w,c);
+and(x,w,c);
+and(y,a,b);
+or(cy,x,y);
+endmodule
